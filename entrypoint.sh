@@ -66,5 +66,6 @@ response=$(curl --location "${TEAMS_WEBHOOK_URL}" \
                 --data "$json_payload")
 
 # Set the output
-echo "http_response=$response" >> $GITHUB_OUTPUT
+# echo "http_response=$response" >> $GITHUB_OUTPUT
+echo "http_response=$response" >> "$GITHUB_OUTPUT"
 # echo "::set-output name=http_response::$response"
