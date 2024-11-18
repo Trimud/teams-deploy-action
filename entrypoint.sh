@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Prepare the JSON payload
 json_payload=$(cat << EOF
