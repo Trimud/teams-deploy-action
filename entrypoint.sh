@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -l
 
 # Prepare the JSON payload
 json_payload=$(cat << EOF
@@ -66,4 +66,4 @@ response=$(curl --location "${TEAMS_WEBHOOK_URL}" \
                 --data "$json_payload")
 
 # Set the output
-echo "http_response=$response" >> $GITHUB_OUTPUT
+echo "http_response=$response" | tee -a $GITHUB_OUTPUT
